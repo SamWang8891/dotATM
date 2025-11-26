@@ -53,6 +53,6 @@
 
 目前主要開發 branch 為 dev。我已新增不同 branch，請依照以下分工表使用該 branch，請勿修改非你 branch 所該改的東西，避免 merge 衝突。
 
-- feature/CreateAccountForm @吳崇豪
-- feature/LoginForm @賴宥亘
+- feature/create-account-form @吳崇豪
+- feature/login-form @賴宥亘
 - feature/transaction-forms @姜冠慈
