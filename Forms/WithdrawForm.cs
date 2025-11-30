@@ -18,7 +18,7 @@ namespace dotATM.Forms
 
 
 
-        public WithdrawForm()
+        public WithdrawForm(string accountNumber)
         {
             InitializeComponent();
             currentUserAccount = accountNumber;

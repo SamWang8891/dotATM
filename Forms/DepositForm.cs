@@ -17,7 +17,7 @@ namespace dotATM.Forms
         private string currentUserAccount;
         private AccountService service = new AccountService();
 
-        public DepositForm()
+        public DepositForm(string accountNumber)
         {
             InitializeComponent();
             currentUserAccount = accountNumber;
