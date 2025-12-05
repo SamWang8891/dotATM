@@ -14,12 +14,14 @@ namespace dotATM.Forms
 {
     public partial class CreateAccountForm : Form
     {
+        private AccountService service = new AccountService();
         public CreateAccountForm()
         {
             InitializeComponent();
             accountTextBox.ImeMode = ImeMode.Disable;
             passwordTextBox.ImeMode = ImeMode.Disable;
             recheckTextBox.ImeMode = ImeMode.Disable;
+
         }
 
         private bool IsPasswordValid(string input)
@@ -93,7 +95,9 @@ namespace dotATM.Forms
                 recheckTextBox.Text = "";
                 return;
             }
-            AccountService 
+
+            service.CreateAccount(accountTextBox.Text, passwordTextBox.Text);
+
             MessageBox.Show("創建帳號成功!");
             this.DialogResult = DialogResult.OK;
             this.Close();
