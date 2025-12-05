@@ -39,7 +39,7 @@ namespace dotATM.Forms
                     return;
                 }
 
-                bool result = service.Withdraw(currentUserAccount, amount);
+                bool result = service.Deposit(currentUserAccount, amount);
 
                 if (result)
                 {
@@ -48,6 +48,78 @@ namespace dotATM.Forms
                 else
                 {
                     MessageBox.Show("存款失敗，餘額不足或金額錯誤");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                bool result = service.Deposit(currentUserAccount, 1000);
+
+                if (result)
+                {
+                    label3.Text = service.GetBalance(currentUserAccount).ToString();
+                }
+                else
+                {
+                    MessageBox.Show("錯誤");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                bool result = service.Deposit(currentUserAccount, 5000);
+
+                if (result)
+                {
+                    label3.Text = service.GetBalance(currentUserAccount).ToString();
+                }
+                else
+                {
+                    MessageBox.Show("錯誤");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                bool result = service.Deposit(currentUserAccount, 10000);
+
+                if (result)
+                {
+                    label3.Text = service.GetBalance(currentUserAccount).ToString();
+                }
+                else
+                {
+                    MessageBox.Show("錯誤");
                 }
 
             }

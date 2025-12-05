@@ -13,7 +13,7 @@ namespace dotATM.Forms
 {
     public partial class WithdrawForm : Form
     {
-        private string currentUserAccount;  
+        private string currentUserAccount;
         private AccountService service = new AccountService();
 
 
@@ -32,7 +32,7 @@ namespace dotATM.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
 
             try
             {
@@ -46,7 +46,80 @@ namespace dotATM.Forms
 
                 if (result)
                 {
-                    label3.Text =  service.GetBalance(currentUserAccount).ToString();
+                    label3.Text = service.GetBalance(currentUserAccount).ToString();
+                }
+                else
+                {
+                    MessageBox.Show("提款失敗，餘額不足或金額錯誤");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                bool result = service.Withdraw(currentUserAccount, 1000);
+
+                if (result)
+                {
+                    label3.Text = service.GetBalance(currentUserAccount).ToString();
+                }
+                else
+                {
+                    MessageBox.Show("提款失敗，餘額不足或金額錯誤");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                bool result = service.Withdraw(currentUserAccount, 5000);
+
+                if (result)
+                {
+                    label3.Text = service.GetBalance(currentUserAccount).ToString();
+                }
+                else
+                {
+                    MessageBox.Show("提款失敗，餘額不足或金額錯誤");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                bool result = service.Withdraw(currentUserAccount, 10000);
+
+                if (result)
+                {
+                    label3.Text = service.GetBalance(currentUserAccount).ToString();
                 }
                 else
                 {
