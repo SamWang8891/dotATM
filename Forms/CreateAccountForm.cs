@@ -14,10 +14,11 @@ namespace dotATM.Forms
 {
     public partial class CreateAccountForm : Form
     {
-        private AccountService service = new AccountService();
-        public CreateAccountForm()
+        private AccountService _service;
+        public CreateAccountForm(AccountService service)
         {
             InitializeComponent();
+            _service = service;
             accountTextBox.ImeMode = ImeMode.Disable;
             passwordTextBox.ImeMode = ImeMode.Disable;
             recheckTextBox.ImeMode = ImeMode.Disable;
@@ -44,20 +45,6 @@ namespace dotATM.Forms
             }
 
             return true;
-        }
-        private void CreateAccountForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void keyPass_process(object sender, KeyPressEventArgs e)
@@ -96,21 +83,18 @@ namespace dotATM.Forms
                 return;
             }
 
-            service.CreateAccount(accountTextBox.Text, passwordTextBox.Text);
+            _service.CreateAccount(accountTextBox.Text, passwordTextBox.Text);
 
             MessageBox.Show("創建帳號成功!");
             this.DialogResult = DialogResult.OK;
-            this.Close();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            //this.Close();
         }
 
         private void button_back_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+            LoginForm loginForm = new LoginForm(_service);
+            loginForm.Show();
             this.Close();
         }
     }

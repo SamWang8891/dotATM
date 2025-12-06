@@ -13,19 +13,17 @@ namespace dotATM.Forms
 {
     public partial class DepositForm : Form
     {
+        private AccountService _service;
 
-        private string currentUserAccount;
-        private AccountService service = new AccountService();
-
-        public DepositForm(string accountNumber)
+        public DepositForm(AccountService service)
         {
             InitializeComponent();
-            currentUserAccount = accountNumber;
+            _service = service;
         }
 
         public void ShowBalance(object sender, EventArgs e)
         {
-            int balance = service.GetBalance(currentUserAccount);
+            int balance = _service.GetBalance();
             label3.Text = balance.ToString();
         }
 
@@ -39,11 +37,11 @@ namespace dotATM.Forms
                     return;
                 }
 
-                bool result = service.Deposit(currentUserAccount, amount);
+                bool result = _service.Deposit(amount);
 
                 if (result)
                 {
-                    label3.Text = service.GetBalance(currentUserAccount).ToString();
+                    label3.Text = _service.GetBalance().ToString();
                 }
                 else
                 {
@@ -63,11 +61,11 @@ namespace dotATM.Forms
             try
             {
 
-                bool result = service.Deposit(currentUserAccount, 1000);
+                bool result = _service.Deposit(1000);
 
                 if (result)
                 {
-                    label3.Text = service.GetBalance(currentUserAccount).ToString();
+                    label3.Text = _service.GetBalance().ToString();
                 }
                 else
                 {
@@ -87,11 +85,11 @@ namespace dotATM.Forms
             try
             {
 
-                bool result = service.Deposit(currentUserAccount, 5000);
+                bool result = _service.Deposit(5000);
 
                 if (result)
                 {
-                    label3.Text = service.GetBalance(currentUserAccount).ToString();
+                    label3.Text = _service.GetBalance().ToString();
                 }
                 else
                 {
@@ -111,11 +109,11 @@ namespace dotATM.Forms
             try
             {
 
-                bool result = service.Deposit(currentUserAccount, 10000);
+                bool result = _service.Deposit(10000);
 
                 if (result)
                 {
-                    label3.Text = service.GetBalance(currentUserAccount).ToString();
+                    label3.Text = _service.GetBalance().ToString();
                 }
                 else
                 {
@@ -128,6 +126,13 @@ namespace dotATM.Forms
                 MessageBox.Show(ex.Message);
                 return;
             }
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            MenuForm menuForm = new MenuForm(_service);
+            menuForm.Show();
+            this.Close();
         }
     }
 }

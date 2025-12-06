@@ -13,12 +13,19 @@ namespace dotATM.Forms
 {
     public partial class LoginForm : Form
     {
-        private AccountService _accountService;
+        private AccountService _service;
         public LoginForm()
         {
-            _accountService = new AccountService();
             InitializeComponent();
-            _accountService.CreateAccount("a", "a");
+            _service = new AccountService(); 
+            AccountInput.ImeMode = ImeMode.Disable;
+            PasswordInput.ImeMode = ImeMode.Disable;
+        }
+
+        public LoginForm(AccountService service)
+        {
+            InitializeComponent();
+            _service = service;
             AccountInput.ImeMode = ImeMode.Disable;
             PasswordInput.ImeMode = ImeMode.Disable;
         }
@@ -27,14 +34,21 @@ namespace dotATM.Forms
         {
             string account = AccountInput.Text;
             string password = PasswordInput.Text;
-            bool isValid = _accountService.VerifyPassword(account, password);
+            bool isValid = false;
 
+            if (AccountInput.Text == "" || PasswordInput.Text == "")
+            {
+                MessageBox.Show("請輸入帳號及密碼！");
+            }
+
+            
+            isValid = _service.Login(account, password);
             if (isValid)
             {
                 MessageBox.Show("登入成功！");
-                MenuForm menu = new MenuForm(account);
+                MenuForm menu = new MenuForm(_service);
                 menu.Show();
-                this.Hide();
+                this.Close();
             }
             else
             {
@@ -44,9 +58,9 @@ namespace dotATM.Forms
 
         private void createAccountBtn_Click(object sender, EventArgs e)
         {
-            CreateAccountForm createAccount = new CreateAccountForm();
+            CreateAccountForm createAccount = new CreateAccountForm(_service);
             createAccount.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

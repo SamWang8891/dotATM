@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dotATM.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,32 +13,33 @@ namespace dotATM.Forms
 {
     public partial class MenuForm : Form
     {
-        private string currentUserAccount = "";
-        public MenuForm(string currentUserAccount)
+        private AccountService _service;
+       
+        public MenuForm(AccountService service)
         {
             InitializeComponent();
-            this.currentUserAccount = currentUserAccount;
+            _service = service;
         }
 
         private void withdrawButton_Click(object sender, EventArgs e)
         {
-            WithdrawForm withdrawForm = new WithdrawForm(currentUserAccount);
+            WithdrawForm withdrawForm = new WithdrawForm(_service);
             withdrawForm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void depositButton_Click(object sender, EventArgs e)
         {
-            DepositForm depositForm = new DepositForm(currentUserAccount);
+            DepositForm depositForm = new DepositForm(_service);
             depositForm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void logoutButton_Click(object sender, EventArgs e)
         {
             WelcomeForm welcomeForm = new WelcomeForm();
             welcomeForm.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

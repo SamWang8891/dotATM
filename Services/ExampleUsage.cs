@@ -30,25 +30,25 @@
 
             // 3. Deposit money
             Console.WriteLine("3. Making deposits...");
-            service.Deposit("1001", 1000);
-            service.Deposit("1001", 500);
-            service.Deposit("1002", 2000);
+            service.Deposit(1000);
+            service.Deposit(500);
+            service.Deposit(2000);
 
-            Console.WriteLine($"Account 1001 balance: ${service.GetBalance("1001")}");
-            Console.WriteLine($"Account 1002 balance: ${service.GetBalance("1002")}\n");
+            Console.WriteLine($"Account 1001 balance: ${service.GetBalance()}");
+            Console.WriteLine($"Account 1002 balance: ${service.GetBalance()}\n");
 
             // 4. Withdraw money
             Console.WriteLine("4. Making withdrawals...");
-            bool withdraw1 = service.Withdraw("1001", 300);
-            bool withdraw2 = service.Withdraw("1001", 5000); // Should fail - insufficient funds
+            bool withdraw1 = service.Withdraw(300);
+            bool withdraw2 = service.Withdraw(5000); // Should fail - insufficient funds
 
             Console.WriteLine($"Withdraw $300 from 1001: {withdraw1}");
             Console.WriteLine($"Withdraw $5000 from 1001: {withdraw2} (should be false - insufficient funds)");
-            Console.WriteLine($"Account 1001 balance after withdrawal: ${service.GetBalance("1001")}\n");
+            Console.WriteLine($"Account 1001 balance after withdrawal: ${service.GetBalance()}\n");
 
             // 5. View transaction records
             Console.WriteLine("5. Transaction history for account 1001:");
-            var transactions = service.GetTransactionRecords("1001");
+            var transactions = service.GetTransactionRecords();
             foreach (var transaction in transactions)
             {
                 Console.WriteLine($"  {transaction}");
@@ -66,8 +66,8 @@
 
             // 7. Final balances
             Console.WriteLine("7. Final account summary:");
-            Console.WriteLine($"Account 1001 - Balance: ${service.GetBalance("1001")}");
-            Console.WriteLine($"Account 1002 - Balance: ${service.GetBalance("1002")}");
+            Console.WriteLine($"Account 1001 - Balance: ${service.GetBalance()}");
+            Console.WriteLine($"Account 1002 - Balance: ${service.GetBalance()}");
 
             Console.WriteLine("\n=== Test Complete ===");
             Console.ReadLine();

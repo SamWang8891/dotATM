@@ -17,7 +17,13 @@ namespace dotATM
 
 #else
             ApplicationConfiguration.Initialize();
-            Application.Run(new Forms.WelcomeForm());
+
+            // Create and show WelcomeForm, but don't make it the main form
+            var welcomeForm = new Forms.WelcomeForm();
+            welcomeForm.Show();
+
+            // Run without specifying a main form
+            Application.Run();
 #endif
         }
 

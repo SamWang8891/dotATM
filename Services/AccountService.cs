@@ -45,7 +45,21 @@ namespace dotATM.Services
 
     public class AccountService
     {
+        private string currentAccountNumber = "";
         private static List<Account> accounts = new List<Account>();
+
+        // Login
+        public bool Login(string accountNumber, string password)
+        {
+            var account = accounts.FirstOrDefault(a => a.AccountNumber == accountNumber);
+            if (account != null && account.Password == password)
+            {
+                currentAccountNumber = accountNumber;
+                return true;
+            }
+            return false;
+        }
+
 
         // Create new account
         public bool CreateAccount(string accountNumber, string password)
@@ -65,9 +79,9 @@ namespace dotATM.Services
         }
 
         // Deposit money
-        public bool Deposit(string accountNumber, int amount)
+        public bool Deposit(int amount)
         {
-            var account = accounts.FirstOrDefault(a => a.AccountNumber == accountNumber);
+            var account = accounts.FirstOrDefault(a => a.AccountNumber == currentAccountNumber);
             if (account == null || amount <= 0) return false;
 
             account.Balance += amount;
@@ -76,9 +90,9 @@ namespace dotATM.Services
         }
 
         // Withdraw money
-        public bool Withdraw(string accountNumber, int amount)
+        public bool Withdraw(int amount)
         {
-            var account = accounts.FirstOrDefault(a => a.AccountNumber == accountNumber);
+            var account = accounts.FirstOrDefault(a => a.AccountNumber == currentAccountNumber);
             if (account == null || amount <= 0 || account.Balance < amount) return false;
 
             account.Balance -= amount;
@@ -86,10 +100,10 @@ namespace dotATM.Services
             return true;
         }
 
-        // Get current balance
-        public int GetBalance(string accountNumber)
+        // Get current balance of the logged-in account
+        public int GetBalance()
         {
-            var account = accounts.FirstOrDefault(a => a.AccountNumber == accountNumber);
+            var account = accounts.FirstOrDefault(a => a.AccountNumber == currentAccountNumber);
             return account?.Balance ?? 0;
         }
 
@@ -104,9 +118,9 @@ namespace dotATM.Services
         }
 
         // Get transaction history
-        public List<Transaction> GetTransactionRecords(string accountNumber)
+        public List<Transaction> GetTransactionRecords()
         {
-            var account = accounts.FirstOrDefault(a => a.AccountNumber == accountNumber);
+            var account = accounts.FirstOrDefault(a => a.AccountNumber == currentAccountNumber);
             return account?.TransactionRecords ?? new List<Transaction>();
         }
     }
