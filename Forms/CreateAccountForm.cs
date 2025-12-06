@@ -97,5 +97,10 @@ namespace dotATM.Forms
             loginForm.Show();
             this.Close();
         }
+
+        private void CreateAccountForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

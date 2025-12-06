@@ -151,7 +151,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(727, 489);
+            ClientSize = new Size(1178, 644);
             Controls.Add(label_warning);
             Controls.Add(label4);
             Controls.Add(button_create_account);
@@ -162,7 +162,9 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "CreateAccountForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "創建帳號";
             ResumeLayout(false);
             PerformLayout();

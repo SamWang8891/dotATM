@@ -141,7 +141,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1691, 1102);
+            ClientSize = new Size(1178, 644);
             Controls.Add(btnReturn);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -151,8 +151,10 @@
             Controls.Add(label1);
             Controls.Add(textBox1);
             Controls.Add(button1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4, 5, 4, 5);
             Name = "WithdrawForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "WithdrawForm";
             Load += ShowBalance;
             ResumeLayout(false);

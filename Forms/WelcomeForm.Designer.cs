@@ -70,6 +70,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "WelcomeForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "WelcomeForm";
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             ResumeLayout(false);
