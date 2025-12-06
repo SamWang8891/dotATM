@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dotATM.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,125 @@ namespace dotATM.Forms
 {
     public partial class WithdrawForm : Form
     {
-        public WithdrawForm()
+        private string currentUserAccount;
+        private AccountService service = new AccountService();
+
+
+
+        public WithdrawForm(string accountNumber)
         {
             InitializeComponent();
+            currentUserAccount = accountNumber;
+        }
+
+        public void ShowBalance(object sender, EventArgs e)
+        {
+            int balance = service.GetBalance(currentUserAccount);
+            label3.Text = balance.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+
+            try
+            {
+                if (!int.TryParse(textBox1.Text, out int amount))
+                {
+                    MessageBox.Show("請輸入正確金額");
+                    return;
+                }
+
+                bool result = service.Withdraw(currentUserAccount, amount);
+
+                if (result)
+                {
+                    label3.Text = service.GetBalance(currentUserAccount).ToString();
+                }
+                else
+                {
+                    MessageBox.Show("提款失敗，餘額不足或金額錯誤");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                bool result = service.Withdraw(currentUserAccount, 1000);
+
+                if (result)
+                {
+                    label3.Text = service.GetBalance(currentUserAccount).ToString();
+                }
+                else
+                {
+                    MessageBox.Show("提款失敗，餘額不足或金額錯誤");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                bool result = service.Withdraw(currentUserAccount, 5000);
+
+                if (result)
+                {
+                    label3.Text = service.GetBalance(currentUserAccount).ToString();
+                }
+                else
+                {
+                    MessageBox.Show("提款失敗，餘額不足或金額錯誤");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                bool result = service.Withdraw(currentUserAccount, 10000);
+
+                if (result)
+                {
+                    label3.Text = service.GetBalance(currentUserAccount).ToString();
+                }
+                else
+                {
+                    MessageBox.Show("提款失敗，餘額不足或金額錯誤");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
         }
     }
 }

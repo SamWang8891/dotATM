@@ -21,14 +21,14 @@ namespace dotATM.Forms
 
         private void withdrawButton_Click(object sender, EventArgs e)
         {
-            WithdrawForm withdrawForm = new WithdrawForm();
+            WithdrawForm withdrawForm = new WithdrawForm(currentUserAccount);
             withdrawForm.Show();
             this.Hide();
         }
 
         private void depositButton_Click(object sender, EventArgs e)
         {
-            DepositForm depositForm = new DepositForm();
+            DepositForm depositForm = new DepositForm(currentUserAccount);
             depositForm.Show();
             this.Hide();
         }
