@@ -12,9 +12,11 @@ namespace dotATM.Forms
 {
     public partial class MenuForm : Form
     {
-        public MenuForm()
+        private string currentUserAccount = "";
+        public MenuForm(string currentUserAccount)
         {
             InitializeComponent();
+            this.currentUserAccount = currentUserAccount;
         }
 
         private void withdrawButton_Click(object sender, EventArgs e)
