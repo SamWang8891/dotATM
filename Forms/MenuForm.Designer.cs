@@ -90,7 +90,7 @@
             MaximizeBox = false;
             Name = "MenuForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "MenuForm";
+            Text = "功能選擇";
             ResumeLayout(false);
             PerformLayout();
         }

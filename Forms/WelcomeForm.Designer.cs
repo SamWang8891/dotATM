@@ -71,7 +71,7 @@
             MaximizeBox = false;
             Name = "WelcomeForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "WelcomeForm";
+            Text = "歡迎";
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             ResumeLayout(false);
             PerformLayout();

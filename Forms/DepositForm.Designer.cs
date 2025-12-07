@@ -159,7 +159,7 @@
             MaximizeBox = false;
             Name = "DepositForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "DepositForm";
+            Text = "存款";
             Load += ShowBalance;
             ResumeLayout(false);
             PerformLayout();

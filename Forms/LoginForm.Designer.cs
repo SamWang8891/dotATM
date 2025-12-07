@@ -132,7 +132,7 @@
             MaximizeBox = false;
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "LoginForm";
+            Text = "登入";
             ResumeLayout(false);
             PerformLayout();
         }

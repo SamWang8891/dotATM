@@ -159,7 +159,7 @@
             MaximizeBox = false;
             Name = "WithdrawForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "WithdrawForm";
+            Text = "提款";
             Load += ShowBalance;
             ResumeLayout(false);
             PerformLayout();
