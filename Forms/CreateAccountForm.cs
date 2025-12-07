@@ -87,7 +87,9 @@ namespace dotATM.Forms
 
             MessageBox.Show("創建帳號成功!");
             this.DialogResult = DialogResult.OK;
-            //this.Close();
+            LoginForm loginForm = new LoginForm(_service);
+            loginForm.Show();
+            this.Close();
         }
 
         private void button_back_Click(object sender, EventArgs e)
