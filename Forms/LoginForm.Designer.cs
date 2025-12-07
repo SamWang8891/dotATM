@@ -41,7 +41,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(174, 94);
+            label1.Location = new Point(344, 80);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(545, 81);
@@ -52,7 +52,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(112, 234);
+            label2.Location = new Point(256, 210);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(185, 81);
@@ -63,7 +63,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(112, 354);
+            label3.Location = new Point(256, 330);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(185, 81);
@@ -73,31 +73,31 @@
             // AccountInput
             // 
             AccountInput.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            AccountInput.Location = new Point(349, 240);
+            AccountInput.Location = new Point(476, 215);
             AccountInput.Margin = new Padding(4, 5, 4, 5);
             AccountInput.Multiline = true;
             AccountInput.Name = "AccountInput";
-            AccountInput.Size = new Size(426, 72);
+            AccountInput.Size = new Size(450, 72);
             AccountInput.TabIndex = 3;
             // 
             // PasswordInput
             // 
             PasswordInput.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            PasswordInput.Location = new Point(349, 360);
+            PasswordInput.Location = new Point(476, 335);
             PasswordInput.Margin = new Padding(4, 5, 4, 5);
             PasswordInput.Multiline = true;
             PasswordInput.Name = "PasswordInput";
             PasswordInput.PasswordChar = '*';
-            PasswordInput.Size = new Size(426, 72);
+            PasswordInput.Size = new Size(450, 72);
             PasswordInput.TabIndex = 4;
             // 
             // loginBtn
             // 
-            loginBtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            loginBtn.Location = new Point(632, 479);
+            loginBtn.Font = new Font("Segoe UI", 20F);
+            loginBtn.Location = new Point(639, 480);
             loginBtn.Margin = new Padding(4, 5, 4, 5);
             loginBtn.Name = "loginBtn";
-            loginBtn.Size = new Size(142, 83);
+            loginBtn.Size = new Size(250, 70);
             loginBtn.TabIndex = 5;
             loginBtn.Text = "登入";
             loginBtn.UseVisualStyleBackColor = true;
@@ -105,11 +105,11 @@
             // 
             // createAccountBtn
             // 
-            createAccountBtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            createAccountBtn.Location = new Point(349, 479);
+            createAccountBtn.Font = new Font("Segoe UI", 20F);
+            createAccountBtn.Location = new Point(289, 480);
             createAccountBtn.Margin = new Padding(4, 5, 4, 5);
             createAccountBtn.Name = "createAccountBtn";
-            createAccountBtn.Size = new Size(142, 83);
+            createAccountBtn.Size = new Size(250, 70);
             createAccountBtn.TabIndex = 6;
             createAccountBtn.Text = "建立帳戶";
             createAccountBtn.UseVisualStyleBackColor = true;

@@ -37,17 +37,19 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(328, 113);
+            label1.Font = new Font("Segoe UI", 30F);
+            label1.Location = new Point(421, 150);
             label1.Name = "label1";
-            label1.Size = new Size(102, 25);
+            label1.Size = new Size(335, 81);
             label1.TabIndex = 0;
             label1.Text = "請選擇功能";
             // 
             // withdrawButton
             // 
-            withdrawButton.Location = new Point(174, 265);
+            withdrawButton.Font = new Font("Segoe UI", 20F);
+            withdrawButton.Location = new Point(139, 433);
             withdrawButton.Name = "withdrawButton";
-            withdrawButton.Size = new Size(112, 34);
+            withdrawButton.Size = new Size(250, 70);
             withdrawButton.TabIndex = 1;
             withdrawButton.Text = "提款";
             withdrawButton.UseVisualStyleBackColor = true;
@@ -55,9 +57,10 @@
             // 
             // depositButton
             // 
-            depositButton.Location = new Point(412, 265);
+            depositButton.Font = new Font("Segoe UI", 20F);
+            depositButton.Location = new Point(464, 433);
             depositButton.Name = "depositButton";
-            depositButton.Size = new Size(112, 34);
+            depositButton.Size = new Size(250, 70);
             depositButton.TabIndex = 2;
             depositButton.Text = "存款";
             depositButton.UseVisualStyleBackColor = true;
@@ -65,9 +68,10 @@
             // 
             // logoutButton
             // 
-            logoutButton.Location = new Point(586, 254);
+            logoutButton.Font = new Font("Segoe UI", 20F);
+            logoutButton.Location = new Point(789, 433);
             logoutButton.Name = "logoutButton";
-            logoutButton.Size = new Size(112, 34);
+            logoutButton.Size = new Size(250, 70);
             logoutButton.TabIndex = 3;
             logoutButton.Text = "登出";
             logoutButton.UseVisualStyleBackColor = true;
@@ -83,6 +87,7 @@
             Controls.Add(withdrawButton);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "MenuForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MenuForm";
