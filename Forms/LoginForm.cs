@@ -39,9 +39,14 @@ namespace dotATM.Forms
             if (AccountInput.Text == "" || PasswordInput.Text == "")
             {
                 MessageBox.Show("請輸入帳號及密碼！");
+                return;
+            }
+            else if (!_service.VerifyAccountExistence(account))
+            {
+                MessageBox.Show("帳號未註冊，請先利用下方\"建立帳戶\"按鈕註冊帳戶！");
+                return;
             }
 
-            
             isValid = _service.Login(account, password);
             if (isValid)
             {
@@ -52,7 +57,7 @@ namespace dotATM.Forms
             }
             else
             {
-                MessageBox.Show("帳號或密碼錯誤，請重試。");
+                MessageBox.Show("密碼錯誤，請重試。");
             }
         }
 

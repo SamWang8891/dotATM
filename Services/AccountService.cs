@@ -71,6 +71,15 @@ namespace dotATM.Services
             return true;
         }
 
+        //new
+        //Verify account existence
+        public bool VerifyAccountExistence(string accountNumber)
+        {
+            var account = accounts.FirstOrDefault(a => a.AccountNumber == accountNumber);
+            return account != null;
+        }
+
+
         // Verify login
         public bool VerifyPassword(string accountNumber, string password)
         {
