@@ -132,5 +132,42 @@ namespace dotATM.Services
             var account = accounts.FirstOrDefault(a => a.AccountNumber == currentAccountNumber);
             return account?.TransactionRecords ?? new List<Transaction>();
         }
+
+        // Transfer money
+        public int Transfer(string targetAccountNumber, int amount)
+        {
+            var sourceAccount = accounts.FirstOrDefault(a => a.AccountNumber == currentAccountNumber);
+            var targetAccount = accounts.FirstOrDefault(a => a.AccountNumber == targetAccountNumber);
+            
+            //狀態 1: 餘額不足
+            if (sourceAccount.Balance < amount)
+            {
+                return 1;
+            }
+
+            //狀態 2: 目標帳戶不存在
+            if (targetAccount == null)
+            {
+                return 2;
+            }
+
+            //狀態 3: 嘗試轉給自己
+            if (sourceAccount.AccountNumber == targetAccount.AccountNumber)
+            {
+                return 3;
+            }
+
+            sourceAccount.Balance -= amount;
+            targetAccount.Balance += amount;
+
+            // 雙向記錄交易
+            sourceAccount.TransactionRecords.Add(
+                new Transaction($"Transfer Out (To: {targetAccountNumber})", amount, sourceAccount.Balance));
+
+            targetAccount.TransactionRecords.Add(
+                new Transaction($"Transfer In (From: {sourceAccount.AccountNumber})", amount, targetAccount.Balance));
+
+            return 0;
+        }
     }
 }

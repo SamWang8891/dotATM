@@ -14,7 +14,7 @@ namespace dotATM.Forms
     public partial class MenuForm : Form
     {
         private AccountService _service;
-       
+
         public MenuForm(AccountService service)
         {
             InitializeComponent();
@@ -39,6 +39,13 @@ namespace dotATM.Forms
         {
             WelcomeForm welcomeForm = new WelcomeForm();
             welcomeForm.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TransferForm transForm = new TransferForm(_service);
+            transForm.Show();
             this.Close();
         }
     }
