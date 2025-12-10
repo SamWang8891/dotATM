@@ -41,9 +41,10 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(409, 304);
+            button1.Location = new Point(584, 507);
+            button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
-            button1.Size = new Size(166, 51);
+            button1.Size = new Size(237, 85);
             button1.TabIndex = 0;
             button1.Text = "還款";
             button1.UseVisualStyleBackColor = true;
@@ -53,27 +54,30 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(137, 205);
+            label2.Location = new Point(196, 342);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(135, 37);
+            label2.Size = new Size(197, 55);
             label2.TabIndex = 2;
             label2.Text = "還款金額:";
             // 
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(301, 202);
+            textBox1.Location = new Point(430, 337);
+            textBox1.Margin = new Padding(4, 5, 4, 5);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(274, 43);
+            textBox1.Size = new Size(390, 61);
             textBox1.TabIndex = 3;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(137, 125);
+            label1.Location = new Point(196, 208);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(135, 37);
+            label1.Size = new Size(197, 55);
             label1.TabIndex = 2;
             label1.Text = "欠款金額:";
             // 
@@ -81,17 +85,19 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(301, 125);
+            label3.Location = new Point(430, 208);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(0, 37);
+            label3.Size = new Size(0, 55);
             label3.TabIndex = 2;
             // 
             // button2
             // 
             button2.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(189, 304);
+            button2.Location = new Point(270, 507);
+            button2.Margin = new Padding(4, 5, 4, 5);
             button2.Name = "button2";
-            button2.Size = new Size(166, 51);
+            button2.Size = new Size(237, 85);
             button2.TabIndex = 0;
             button2.Text = "返回";
             button2.UseVisualStyleBackColor = true;
@@ -101,9 +107,10 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(137, 58);
+            label4.Location = new Point(196, 97);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(135, 37);
+            label4.Size = new Size(199, 55);
             label4.TabIndex = 2;
             label4.Text = "帳戶餘額:";
             // 
@@ -111,16 +118,17 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(301, 58);
+            label5.Location = new Point(430, 97);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(0, 37);
+            label5.Size = new Size(0, 55);
             label5.TabIndex = 2;
             // 
             // RepayForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1143, 750);
             Controls.Add(textBox1);
             Controls.Add(label3);
             Controls.Add(label5);
@@ -129,7 +137,9 @@
             Controls.Add(label2);
             Controls.Add(button2);
             Controls.Add(button1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "RepayForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "RepayForm";
             Load += ShowBalance;
             ResumeLayout(false);
