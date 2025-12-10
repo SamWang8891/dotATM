@@ -207,10 +207,10 @@ namespace dotATM.Services
 
             // 雙向記錄交易
             sourceAccount.TransactionRecords.Add(
-                new Transaction($"Transfer Out (To: {targetAccountNumber})", amount, sourceAccount.Balance));
+                new Transaction($"Transfer Out (To: {targetAccountNumber})", amount, sourceAccount.Balance, sourceAccount.LoanBalance));
 
             targetAccount.TransactionRecords.Add(
-                new Transaction($"Transfer In (From: {sourceAccount.AccountNumber})", amount, targetAccount.Balance));
+                new Transaction($"Transfer In (From: {sourceAccount.AccountNumber})", amount, targetAccount.Balance, targetAccount.LoanBalance));
 
             return 0;
         }

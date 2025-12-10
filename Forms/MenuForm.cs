@@ -46,6 +46,7 @@ namespace dotATM.Forms
         {
             TransferForm transForm = new TransferForm(_service);
             transForm.Show();
+        }
         private void borrowButton_Click(object sender, EventArgs e)
         {
             BorrowForm borrowForm = new BorrowForm(_service);

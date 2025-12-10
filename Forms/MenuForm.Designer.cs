@@ -41,20 +41,18 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 30F);
-            label1.Location = new Point(295, 90);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(421, 120);
             label1.Name = "label1";
-            label1.Size = new Size(233, 54);
+            label1.Size = new Size(335, 81);
             label1.TabIndex = 0;
             label1.Text = "請選擇功能";
             // 
             // withdrawButton
             // 
             withdrawButton.Font = new Font("Segoe UI", 20F);
-            withdrawButton.Location = new Point(97, 260);
-            withdrawButton.Margin = new Padding(2);
+            withdrawButton.Location = new Point(139, 386);
             withdrawButton.Name = "withdrawButton";
-            withdrawButton.Size = new Size(175, 42);
+            withdrawButton.Size = new Size(250, 70);
             withdrawButton.TabIndex = 1;
             withdrawButton.Text = "提款";
             withdrawButton.UseVisualStyleBackColor = true;
@@ -63,10 +61,9 @@
             // depositButton
             // 
             depositButton.Font = new Font("Segoe UI", 20F);
-            depositButton.Location = new Point(325, 260);
-            depositButton.Margin = new Padding(2);
+            depositButton.Location = new Point(464, 386);
             depositButton.Name = "depositButton";
-            depositButton.Size = new Size(175, 42);
+            depositButton.Size = new Size(250, 70);
             depositButton.TabIndex = 2;
             depositButton.Text = "存款";
             depositButton.UseVisualStyleBackColor = true;
@@ -75,10 +72,9 @@
             // logoutButton
             // 
             logoutButton.Font = new Font("Segoe UI", 20F);
-            logoutButton.Location = new Point(552, 260);
-            logoutButton.Margin = new Padding(2);
+            logoutButton.Location = new Point(789, 386);
             logoutButton.Name = "logoutButton";
-            logoutButton.Size = new Size(175, 42);
+            logoutButton.Size = new Size(250, 70);
             logoutButton.TabIndex = 3;
             logoutButton.Text = "登出";
             logoutButton.UseVisualStyleBackColor = true;
@@ -87,20 +83,21 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(325, 192);
+            button1.Location = new Point(464, 262);
+            button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
-            button1.Size = new Size(175, 42);
+            button1.Size = new Size(250, 70);
             button1.TabIndex = 4;
             button1.Text = "轉帳";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            // 
             // repayButton
             // 
             repayButton.Font = new Font("Segoe UI", 20F);
-            repayButton.Location = new Point(442, 272);
-            repayButton.Margin = new Padding(2);
+            repayButton.Location = new Point(631, 510);
             repayButton.Name = "repayButton";
-            repayButton.Size = new Size(175, 42);
+            repayButton.Size = new Size(250, 70);
             repayButton.TabIndex = 3;
             repayButton.Text = "還款";
             repayButton.UseVisualStyleBackColor = true;
@@ -109,10 +106,9 @@
             // borrowButton
             // 
             borrowButton.Font = new Font("Segoe UI", 20F);
-            borrowButton.Location = new Point(205, 272);
-            borrowButton.Margin = new Padding(2);
+            borrowButton.Location = new Point(293, 510);
             borrowButton.Name = "borrowButton";
-            borrowButton.Size = new Size(175, 42);
+            borrowButton.Size = new Size(250, 70);
             borrowButton.TabIndex = 3;
             borrowButton.Text = "借款";
             borrowButton.UseVisualStyleBackColor = true;
@@ -120,9 +116,9 @@
             // 
             // MenuForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(825, 386);
+            ClientSize = new Size(1179, 643);
             Controls.Add(button1);
             Controls.Add(borrowButton);
             Controls.Add(repayButton);
@@ -131,7 +127,6 @@
             Controls.Add(withdrawButton);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(2);
             MaximizeBox = false;
             Name = "MenuForm";
             StartPosition = FormStartPosition.CenterScreen;
