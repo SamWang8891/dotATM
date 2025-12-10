@@ -14,7 +14,7 @@ namespace dotATM.Forms
     public partial class MenuForm : Form
     {
         private AccountService _service;
-       
+
         public MenuForm(AccountService service)
         {
             InitializeComponent();
@@ -42,6 +42,10 @@ namespace dotATM.Forms
             this.Close();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TransferForm transForm = new TransferForm(_service);
+            transForm.Show();
         private void borrowButton_Click(object sender, EventArgs e)
         {
             BorrowForm borrowForm = new BorrowForm(_service);

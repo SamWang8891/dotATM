@@ -32,6 +32,7 @@
             withdrawButton = new Button();
             depositButton = new Button();
             logoutButton = new Button();
+            button1 = new Button();
             repayButton = new Button();
             borrowButton = new Button();
             SuspendLayout();
@@ -50,7 +51,7 @@
             // withdrawButton
             // 
             withdrawButton.Font = new Font("Segoe UI", 20F);
-            withdrawButton.Location = new Point(96, 188);
+            withdrawButton.Location = new Point(97, 260);
             withdrawButton.Margin = new Padding(2);
             withdrawButton.Name = "withdrawButton";
             withdrawButton.Size = new Size(175, 42);
@@ -62,7 +63,7 @@
             // depositButton
             // 
             depositButton.Font = new Font("Segoe UI", 20F);
-            depositButton.Location = new Point(328, 188);
+            depositButton.Location = new Point(325, 260);
             depositButton.Margin = new Padding(2);
             depositButton.Name = "depositButton";
             depositButton.Size = new Size(175, 42);
@@ -74,7 +75,7 @@
             // logoutButton
             // 
             logoutButton.Font = new Font("Segoe UI", 20F);
-            logoutButton.Location = new Point(554, 188);
+            logoutButton.Location = new Point(552, 260);
             logoutButton.Margin = new Padding(2);
             logoutButton.Name = "logoutButton";
             logoutButton.Size = new Size(175, 42);
@@ -83,6 +84,16 @@
             logoutButton.UseVisualStyleBackColor = true;
             logoutButton.Click += logoutButton_Click;
             // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(325, 192);
+            button1.Name = "button1";
+            button1.Size = new Size(175, 42);
+            button1.TabIndex = 4;
+            button1.Text = "轉帳";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // repayButton
             // 
             repayButton.Font = new Font("Segoe UI", 20F);
@@ -112,6 +123,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(825, 386);
+            Controls.Add(button1);
             Controls.Add(borrowButton);
             Controls.Add(repayButton);
             Controls.Add(logoutButton);
@@ -134,6 +146,7 @@
         private Button withdrawButton;
         private Button depositButton;
         private Button logoutButton;
+        private Button button1;
         private Button repayButton;
         private Button borrowButton;
     }
