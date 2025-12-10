@@ -51,7 +51,7 @@
             // 
             withdrawButton.Font = new Font("Segoe UI", 20F);
             withdrawButton.Location = new Point(96, 188);
-            withdrawButton.Margin = new Padding(2, 2, 2, 2);
+            withdrawButton.Margin = new Padding(2);
             withdrawButton.Name = "withdrawButton";
             withdrawButton.Size = new Size(175, 42);
             withdrawButton.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             depositButton.Font = new Font("Segoe UI", 20F);
             depositButton.Location = new Point(328, 188);
-            depositButton.Margin = new Padding(2, 2, 2, 2);
+            depositButton.Margin = new Padding(2);
             depositButton.Name = "depositButton";
             depositButton.Size = new Size(175, 42);
             depositButton.TabIndex = 2;
@@ -75,7 +75,7 @@
             // 
             logoutButton.Font = new Font("Segoe UI", 20F);
             logoutButton.Location = new Point(554, 188);
-            logoutButton.Margin = new Padding(2, 2, 2, 2);
+            logoutButton.Margin = new Padding(2);
             logoutButton.Name = "logoutButton";
             logoutButton.Size = new Size(175, 42);
             logoutButton.TabIndex = 3;
@@ -93,7 +93,7 @@
             repayButton.TabIndex = 3;
             repayButton.Text = "還款";
             repayButton.UseVisualStyleBackColor = true;
-            repayButton.Click += logoutButton_Click;
+            repayButton.Click += repayButton_Click;
             // 
             // borrowButton
             // 
@@ -105,7 +105,7 @@
             borrowButton.TabIndex = 3;
             borrowButton.Text = "借款";
             borrowButton.UseVisualStyleBackColor = true;
-            borrowButton.Click += logoutButton_Click;
+            borrowButton.Click += borrowButton_Click;
             // 
             // MenuForm
             // 
@@ -119,7 +119,7 @@
             Controls.Add(withdrawButton);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             MaximizeBox = false;
             Name = "MenuForm";
             StartPosition = FormStartPosition.CenterScreen;

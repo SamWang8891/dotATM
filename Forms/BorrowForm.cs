@@ -19,7 +19,7 @@ namespace dotATM.Forms
         public BorrowForm(AccountService service)
         {
             InitializeComponent();
-            _service= service;
+            _service = service;
         }
 
         public void ShowBalance(object sender, EventArgs e)
@@ -36,8 +36,10 @@ namespace dotATM.Forms
                 return;
             }
 
-            if (_service.Borrow(amount))
+            bool result = _service.Borrow(amount);
+            if (result)
             {
+                label3.Text = _service.GetLoan().ToString();
                 MessageBox.Show("借款成功");
             }
             else

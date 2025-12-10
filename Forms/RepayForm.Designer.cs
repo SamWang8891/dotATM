@@ -34,6 +34,8 @@
             label1 = new Label();
             label3 = new Label();
             button2 = new Button();
+            label4 = new Label();
+            label5 = new Label();
             SuspendLayout();
             // 
             // button1
@@ -95,6 +97,25 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += btnReturn_Click;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(137, 58);
+            label4.Name = "label4";
+            label4.Size = new Size(135, 37);
+            label4.TabIndex = 2;
+            label4.Text = "帳戶餘額:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(301, 58);
+            label5.Name = "label5";
+            label5.Size = new Size(0, 37);
+            label5.TabIndex = 2;
+            // 
             // RepayForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -102,6 +123,8 @@
             ClientSize = new Size(800, 450);
             Controls.Add(textBox1);
             Controls.Add(label3);
+            Controls.Add(label5);
+            Controls.Add(label4);
             Controls.Add(label1);
             Controls.Add(label2);
             Controls.Add(button2);
@@ -121,5 +144,7 @@
         private Label label1;
         private Label label3;
         private Button button2;
+        private Label label4;
+        private Label label5;
     }
 }

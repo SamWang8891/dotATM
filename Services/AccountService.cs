@@ -12,20 +12,20 @@ namespace dotATM.Services
         public string Type { get; set; }  // "Deposit" or "Withdraw"
         public int Amount { get; set; }
         public int BalanceAfter { get; set; }
-        public int LoanBalance { get; set; }
+        public int LoanAfter { get; set; }
 
-        public Transaction(string type, int amount, int balanceAfter, int loanBalance)
+        public Transaction(string type, int amount, int balanceAfter, int loanAfter)
         {
             Date = DateTime.Now;
             Type = type;
             Amount = amount;
             BalanceAfter = balanceAfter;
-            LoanBalance = loanBalance;
+            LoanAfter = loanAfter;
         }
 
         public override string ToString()
         {
-            return $"{Date:yyyy-MM-dd HH:mm:ss} - {Type}: ${Amount} (Balance: ${BalanceAfter} | Loan: {LoanBalance})";
+            return $"{Date:yyyy-MM-dd HH:mm:ss} - {Type}: ${Amount} (Balance: ${BalanceAfter} | Loan: {LoanAfter})";
         }
     }
 
@@ -128,7 +128,7 @@ namespace dotATM.Services
         }
 
         //Borrow money
-        public bool Borrow( int amount)
+        public bool Borrow(int amount)
         {
             var account = accounts.FirstOrDefault(a => a.AccountNumber == currentAccountNumber);
             if (account == null || amount <= 0) return false;
@@ -143,7 +143,7 @@ namespace dotATM.Services
         }
 
         // Repay loan
-        public bool Repay( int amount)
+        public bool Repay(int amount)
         {
             var account = accounts.FirstOrDefault(a => a.AccountNumber == currentAccountNumber);
             if (account == null || amount <= 0) return false;

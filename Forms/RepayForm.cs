@@ -24,8 +24,10 @@ namespace dotATM.Forms
 
         public void ShowBalance(object sender, EventArgs e)
         {
-            int balance = _service.GetLoan();
-            label3.Text = balance.ToString();
+            int balance = _service.GetBalance();
+            int loan = _service.GetLoan();
+            label5.Text = balance.ToString();
+            label3.Text = loan.ToString();
         }
 
         private void repayButton_Click(object sender, EventArgs e)
@@ -36,8 +38,12 @@ namespace dotATM.Forms
                 return;
             }
 
-            if (_service.Repay(amount))
+            bool result = _service.Repay(amount);
+            
+            if (result)
             {
+                label5.Text = _service.GetBalance().ToString();
+                label3.Text = _service.GetLoan().ToString();
                 MessageBox.Show("還款成功");
             }
             else
