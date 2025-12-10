@@ -33,6 +33,8 @@
             depositButton = new Button();
             logoutButton = new Button();
             button1 = new Button();
+            repayButton = new Button();
+            borrowButton = new Button();
             SuspendLayout();
             // 
             // label1
@@ -92,6 +94,29 @@
             button1.Text = "轉帳";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            // repayButton
+            // 
+            repayButton.Font = new Font("Segoe UI", 20F);
+            repayButton.Location = new Point(442, 272);
+            repayButton.Margin = new Padding(2);
+            repayButton.Name = "repayButton";
+            repayButton.Size = new Size(175, 42);
+            repayButton.TabIndex = 3;
+            repayButton.Text = "還款";
+            repayButton.UseVisualStyleBackColor = true;
+            repayButton.Click += repayButton_Click;
+            // 
+            // borrowButton
+            // 
+            borrowButton.Font = new Font("Segoe UI", 20F);
+            borrowButton.Location = new Point(205, 272);
+            borrowButton.Margin = new Padding(2);
+            borrowButton.Name = "borrowButton";
+            borrowButton.Size = new Size(175, 42);
+            borrowButton.TabIndex = 3;
+            borrowButton.Text = "借款";
+            borrowButton.UseVisualStyleBackColor = true;
+            borrowButton.Click += borrowButton_Click;
             // 
             // MenuForm
             // 
@@ -99,6 +124,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(825, 386);
             Controls.Add(button1);
+            Controls.Add(borrowButton);
+            Controls.Add(repayButton);
             Controls.Add(logoutButton);
             Controls.Add(depositButton);
             Controls.Add(withdrawButton);
@@ -120,5 +147,7 @@
         private Button depositButton;
         private Button logoutButton;
         private Button button1;
+        private Button repayButton;
+        private Button borrowButton;
     }
 }

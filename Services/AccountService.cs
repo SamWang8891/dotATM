@@ -12,18 +12,20 @@ namespace dotATM.Services
         public string Type { get; set; }  // "Deposit" or "Withdraw"
         public int Amount { get; set; }
         public int BalanceAfter { get; set; }
+        public int LoanAfter { get; set; }
 
-        public Transaction(string type, int amount, int balanceAfter)
+        public Transaction(string type, int amount, int balanceAfter, int loanAfter)
         {
             Date = DateTime.Now;
             Type = type;
             Amount = amount;
             BalanceAfter = balanceAfter;
+            LoanAfter = loanAfter;
         }
 
         public override string ToString()
         {
-            return $"{Date:yyyy-MM-dd HH:mm:ss} - {Type}: ${Amount} (Balance: ${BalanceAfter})";
+            return $"{Date:yyyy-MM-dd HH:mm:ss} - {Type}: ${Amount} (Balance: ${BalanceAfter} | Loan: {LoanAfter})";
         }
     }
 
@@ -32,6 +34,7 @@ namespace dotATM.Services
         public string AccountNumber { get; set; }
         public string Password { get; set; }
         public int Balance { get; set; }
+        public int LoanBalance { get; set; }
         public List<Transaction> TransactionRecords { get; set; }
 
         public Account(string accountNumber, string password)
@@ -39,6 +42,7 @@ namespace dotATM.Services
             AccountNumber = accountNumber;
             Password = password;
             Balance = 0;
+            LoanBalance = 0;
             TransactionRecords = new List<Transaction>();
         }
     }
@@ -94,7 +98,7 @@ namespace dotATM.Services
             if (account == null || amount <= 0) return false;
 
             account.Balance += amount;
-            account.TransactionRecords.Add(new Transaction("Deposit", amount, account.Balance));
+            account.TransactionRecords.Add(new Transaction("Deposit", amount, account.Balance,account.LoanBalance));
             return true;
         }
 
@@ -105,7 +109,7 @@ namespace dotATM.Services
             if (account == null || amount <= 0 || account.Balance < amount) return false;
 
             account.Balance -= amount;
-            account.TransactionRecords.Add(new Transaction("Withdraw", amount, account.Balance));
+            account.TransactionRecords.Add(new Transaction("Withdraw", amount, account.Balance, account.LoanBalance));
             return true;
         }
 
@@ -114,6 +118,47 @@ namespace dotATM.Services
         {
             var account = accounts.FirstOrDefault(a => a.AccountNumber == currentAccountNumber);
             return account?.Balance ?? 0;
+        }
+
+        // Get current loan balance of the logged-in account
+        public int GetLoan()
+        {
+            var account = accounts.FirstOrDefault(a => a.AccountNumber == currentAccountNumber);
+            return account?.LoanBalance ?? 0;
+        }
+
+        //Borrow money
+        public bool Borrow(int amount)
+        {
+            var account = accounts.FirstOrDefault(a => a.AccountNumber == currentAccountNumber);
+            if (account == null || amount <= 0) return false;
+
+            account.Balance += amount;
+            account.LoanBalance += amount;
+
+            account.TransactionRecords.Add(
+                new Transaction("Loan", amount, account.Balance, account.LoanBalance));
+
+            return true;
+        }
+
+        // Repay loan
+        public bool Repay(int amount)
+        {
+            var account = accounts.FirstOrDefault(a => a.AccountNumber == currentAccountNumber);
+            if (account == null || amount <= 0) return false;
+            if (account.Balance < amount) return false;
+            if (account.LoanBalance <= 0) return false;
+
+
+            account.Balance -= amount;
+            account.LoanBalance -= amount;
+            if (account.LoanBalance < 0) account.LoanBalance = 0;
+
+            account.TransactionRecords.Add(
+                new Transaction("Repay", amount, account.Balance, account.LoanBalance));
+
+            return true;
         }
 
         // Change password
