@@ -41,5 +41,19 @@ namespace dotATM.Forms
             welcomeForm.Show();
             this.Close();
         }
+
+        private void borrowButton_Click(object sender, EventArgs e)
+        {
+            BorrowForm borrowForm = new BorrowForm(_service);
+            borrowForm.Show();
+            this.Close();
+        }
+
+        private void repayButton_Click(object sender, EventArgs e)
+        {
+            RepayForm repayForm = new RepayForm(_service);
+            repayForm.Show();
+            this.Close();
+        }
     }
 }
