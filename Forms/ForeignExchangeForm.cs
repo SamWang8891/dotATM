@@ -252,6 +252,13 @@ namespace dotATM.Forms
             }
 
 
+            if (rates == null || !rates.ContainsKey("USDTWD"))
+            {
+                label_deduct.Text = "";
+                textBox_target.Text = "";
+                MessageBox.Show("匯率查詢中，請稍等");
+                return;
+            }
             decimal usdToTwd = rates["USDTWD"].Exrate;
             decimal usdToTarget = 1.0m;
 
