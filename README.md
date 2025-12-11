@@ -1,37 +1,10 @@
-﻿# 開發注意事項
-
-如果有疑問歡迎討論～
-
-
-
-## 頁面架構
-![Form Structure](README_image/FormStructure.png)
-
-
-
-## 視窗大小
-
-目前視窗大小已藉由以下設定固定：
-- FormBorderStyle = `FixedSingle`
-- MaximizeBox = `False`
-- Size = `1200, 700`。
-
-
-
-## 請先觀察 
-
-- 檔案架構
-- namespace
-- 如何進行頁面跳轉（請看 `WelcomeForm.cs` 的 `startButton_Click()`）
-- 如何存取使用者資訊（請看以下）
-- 字體大小可參照 WelcomeForm
-
+﻿# dotATM
+dotATM 是一個模擬自動提款機 (ATM) 功能的 C# 專案，包含使用者資訊管理、帳戶操作等功能。
 
 
 ## 使用者資訊
 
 有關使用者的資訊的 class 位於 `Services/AccountService.cs`，使用範例請看同目錄底下的 `ExampleUsage.cs`。
-
 
 
 ### 範例測試
@@ -46,13 +19,3 @@
 - 打開 Program.cs，**註解第一行**
 
 請注意，請盡量不要 commit 到你修改過的 Program.cs，避免之後 merge 到測試 code。XD
-
-
-
-## Branch
-
-目前主要開發 branch 為 dev。我已新增不同 branch，請依照以下分工表使用該 branch，請勿修改非你 branch 所該改的東西，避免 merge 衝突。
-
-- feature/create-account-form @吳崇豪
-- feature/login-form @賴宥亘
-- feature/transaction-forms @姜冠慈
