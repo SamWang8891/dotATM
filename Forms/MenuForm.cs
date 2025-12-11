@@ -60,5 +60,12 @@ namespace dotATM.Forms
             repayForm.Show();
             this.Close();
         }
+
+        private void btnForeignWithdraw_Click(object sender, EventArgs e)
+        {
+            ForeignExchangeForm foreignExchangeForm = new ForeignExchangeForm(_service);
+            foreignExchangeForm.Show();
+            this.Close();
+        }
     }
 }

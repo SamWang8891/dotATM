@@ -35,6 +35,7 @@
             button1 = new Button();
             repayButton = new Button();
             borrowButton = new Button();
+            btnForeignWithdraw = new Button();
             SuspendLayout();
             // 
             // label1
@@ -61,7 +62,7 @@
             // depositButton
             // 
             depositButton.Font = new Font("Segoe UI", 20F);
-            depositButton.Location = new Point(464, 386);
+            depositButton.Location = new Point(789, 386);
             depositButton.Name = "depositButton";
             depositButton.Size = new Size(250, 70);
             depositButton.TabIndex = 2;
@@ -72,9 +73,9 @@
             // logoutButton
             // 
             logoutButton.Font = new Font("Segoe UI", 20F);
-            logoutButton.Location = new Point(789, 386);
+            logoutButton.Location = new Point(1052, 561);
             logoutButton.Name = "logoutButton";
-            logoutButton.Size = new Size(250, 70);
+            logoutButton.Size = new Size(115, 70);
             logoutButton.TabIndex = 3;
             logoutButton.Text = "登出";
             logoutButton.UseVisualStyleBackColor = true;
@@ -114,11 +115,24 @@
             borrowButton.UseVisualStyleBackColor = true;
             borrowButton.Click += borrowButton_Click;
             // 
+            // btnForeignWithdraw
+            // 
+            btnForeignWithdraw.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnForeignWithdraw.Location = new Point(464, 386);
+            btnForeignWithdraw.Margin = new Padding(4, 5, 4, 5);
+            btnForeignWithdraw.Name = "btnForeignWithdraw";
+            btnForeignWithdraw.Size = new Size(250, 70);
+            btnForeignWithdraw.TabIndex = 5;
+            btnForeignWithdraw.Text = "外幣提款";
+            btnForeignWithdraw.UseVisualStyleBackColor = true;
+            btnForeignWithdraw.Click += btnForeignWithdraw_Click;
+            // 
             // MenuForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1179, 643);
+            Controls.Add(btnForeignWithdraw);
             Controls.Add(button1);
             Controls.Add(borrowButton);
             Controls.Add(repayButton);
@@ -144,5 +158,6 @@
         private Button button1;
         private Button repayButton;
         private Button borrowButton;
+        private Button btnForeignWithdraw;
     }
 }
