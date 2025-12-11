@@ -64,9 +64,9 @@
             // button_jp
             // 
             button_jp.Font = new Font("Segoe UI", 20F);
-            button_jp.Location = new Point(65, 75);
+            button_jp.Location = new Point(72, 69);
             button_jp.Name = "button_jp";
-            button_jp.Size = new Size(355, 109);
+            button_jp.Size = new Size(390, 100);
             button_jp.TabIndex = 0;
             button_jp.Text = "日圓 JPY ";
             button_jp.TextAlign = ContentAlignment.MiddleRight;
@@ -77,9 +77,9 @@
             // 
             pictureBox_jp.BackColor = Color.Transparent;
             pictureBox_jp.Image = Properties.Resources.flag_jp;
-            pictureBox_jp.Location = new Point(88, 96);
+            pictureBox_jp.Location = new Point(97, 88);
             pictureBox_jp.Name = "pictureBox_jp";
-            pictureBox_jp.Size = new Size(87, 72);
+            pictureBox_jp.Size = new Size(96, 66);
             pictureBox_jp.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox_jp.TabIndex = 1;
             pictureBox_jp.TabStop = false;
@@ -88,9 +88,9 @@
             // 
             pictureBox_us.BackColor = Color.Transparent;
             pictureBox_us.Image = Properties.Resources.flag_us;
-            pictureBox_us.Location = new Point(88, 326);
+            pictureBox_us.Location = new Point(97, 300);
             pictureBox_us.Name = "pictureBox_us";
-            pictureBox_us.Size = new Size(87, 72);
+            pictureBox_us.Size = new Size(96, 66);
             pictureBox_us.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox_us.TabIndex = 3;
             pictureBox_us.TabStop = false;
@@ -98,9 +98,9 @@
             // button_us
             // 
             button_us.Font = new Font("Segoe UI", 20F);
-            button_us.Location = new Point(65, 305);
+            button_us.Location = new Point(72, 281);
             button_us.Name = "button_us";
-            button_us.Size = new Size(355, 109);
+            button_us.Size = new Size(390, 100);
             button_us.TabIndex = 2;
             button_us.Text = "美元 USD ";
             button_us.TextAlign = ContentAlignment.MiddleRight;
@@ -111,9 +111,9 @@
             // 
             pictureBox_eu.BackColor = Color.Transparent;
             pictureBox_eu.Image = Properties.Resources.flag_eu;
-            pictureBox_eu.Location = new Point(88, 441);
+            pictureBox_eu.Location = new Point(97, 406);
             pictureBox_eu.Name = "pictureBox_eu";
-            pictureBox_eu.Size = new Size(87, 72);
+            pictureBox_eu.Size = new Size(96, 66);
             pictureBox_eu.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox_eu.TabIndex = 5;
             pictureBox_eu.TabStop = false;
@@ -121,9 +121,9 @@
             // button_eu
             // 
             button_eu.Font = new Font("Segoe UI", 20F);
-            button_eu.Location = new Point(65, 421);
+            button_eu.Location = new Point(72, 387);
             button_eu.Name = "button_eu";
-            button_eu.Size = new Size(355, 109);
+            button_eu.Size = new Size(390, 100);
             button_eu.TabIndex = 4;
             button_eu.Text = "歐元 EUR ";
             button_eu.TextAlign = ContentAlignment.MiddleRight;
@@ -134,9 +134,9 @@
             // 
             pictureBox_cn.BackColor = Color.Transparent;
             pictureBox_cn.Image = Properties.Resources.flag_cn;
-            pictureBox_cn.Location = new Point(88, 211);
+            pictureBox_cn.Location = new Point(97, 194);
             pictureBox_cn.Name = "pictureBox_cn";
-            pictureBox_cn.Size = new Size(87, 72);
+            pictureBox_cn.Size = new Size(96, 66);
             pictureBox_cn.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox_cn.TabIndex = 7;
             pictureBox_cn.TabStop = false;
@@ -144,9 +144,9 @@
             // button_cn
             // 
             button_cn.Font = new Font("Segoe UI", 20F);
-            button_cn.Location = new Point(65, 190);
+            button_cn.Location = new Point(72, 175);
             button_cn.Name = "button_cn";
-            button_cn.Size = new Size(355, 109);
+            button_cn.Size = new Size(390, 100);
             button_cn.TabIndex = 6;
             button_cn.Text = "人民幣 CNY ";
             button_cn.TextAlign = ContentAlignment.MiddleRight;
@@ -157,18 +157,18 @@
             // 
             label_current_rate.AutoSize = true;
             label_current_rate.Font = new Font("Segoe UI", 20F);
-            label_current_rate.Location = new Point(480, 47);
+            label_current_rate.Location = new Point(528, 43);
             label_current_rate.Name = "label_current_rate";
-            label_current_rate.Size = new Size(183, 54);
+            label_current_rate.Size = new Size(191, 54);
             label_current_rate.TabIndex = 8;
             label_current_rate.Text = "目前匯率";
             // 
             // button_back
             // 
             button_back.Font = new Font("Segoe UI", 20F);
-            button_back.Location = new Point(65, 550);
+            button_back.Location = new Point(72, 506);
             button_back.Name = "button_back";
-            button_back.Size = new Size(355, 80);
+            button_back.Size = new Size(390, 74);
             button_back.TabIndex = 9;
             button_back.Text = "返回";
             button_back.UseVisualStyleBackColor = true;
@@ -177,9 +177,9 @@
             // label_currency_name
             // 
             label_currency_name.Font = new Font("Segoe UI", 18F);
-            label_currency_name.Location = new Point(685, 52);
+            label_currency_name.Location = new Point(754, 48);
             label_currency_name.Name = "label_currency_name";
-            label_currency_name.Size = new Size(392, 48);
+            label_currency_name.Size = new Size(431, 44);
             label_currency_name.TabIndex = 10;
             label_currency_name.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -187,9 +187,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20F);
-            label1.Location = new Point(50, 26);
+            label1.Location = new Point(55, 24);
             label1.Name = "label1";
-            label1.Size = new Size(143, 54);
+            label1.Size = new Size(149, 54);
             label1.TabIndex = 11;
             label1.Text = "主匯率";
             label1.Click += label1_Click;
@@ -198,27 +198,27 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 20F);
-            label2.Location = new Point(12, 85);
+            label2.Location = new Point(13, 78);
             label2.Name = "label2";
-            label2.Size = new Size(183, 54);
+            label2.Size = new Size(191, 54);
             label2.TabIndex = 12;
             label2.Text = "反向匯率";
             // 
             // label_exchange_rate
             // 
             label_exchange_rate.Font = new Font("Segoe UI", 18F);
-            label_exchange_rate.Location = new Point(217, 32);
+            label_exchange_rate.Location = new Point(239, 29);
             label_exchange_rate.Name = "label_exchange_rate";
-            label_exchange_rate.Size = new Size(392, 48);
+            label_exchange_rate.Size = new Size(431, 44);
             label_exchange_rate.TabIndex = 13;
             label_exchange_rate.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label_reverse_rate
             // 
             label_reverse_rate.Font = new Font("Segoe UI", 18F);
-            label_reverse_rate.Location = new Point(217, 91);
+            label_reverse_rate.Location = new Point(239, 84);
             label_reverse_rate.Name = "label_reverse_rate";
-            label_reverse_rate.Size = new Size(392, 48);
+            label_reverse_rate.Size = new Size(431, 44);
             label_reverse_rate.TabIndex = 14;
             label_reverse_rate.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -226,9 +226,9 @@
             // 
             groupBox1.FlatStyle = FlatStyle.Popup;
             groupBox1.Font = new Font("Segoe UI", 12F);
-            groupBox1.Location = new Point(35, 24);
+            groupBox1.Location = new Point(38, 22);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(407, 520);
+            groupBox1.Size = new Size(448, 478);
             groupBox1.TabIndex = 15;
             groupBox1.TabStop = false;
             groupBox1.Text = "匯率選擇";
@@ -237,18 +237,19 @@
             // textBox_target
             // 
             textBox_target.Font = new Font("Segoe UI", 20F);
-            textBox_target.Location = new Point(12, 164);
+            textBox_target.Location = new Point(13, 151);
             textBox_target.Name = "textBox_target";
-            textBox_target.Size = new Size(649, 61);
+            textBox_target.Size = new Size(714, 61);
             textBox_target.TabIndex = 16;
             textBox_target.TextChanged += textBox_target_TextChanged;
+            textBox_target.KeyPress += textBox_target_KeyPress;
             // 
             // btnOption1
             // 
             btnOption1.Font = new Font("Segoe UI", 12F);
-            btnOption1.Location = new Point(12, 249);
+            btnOption1.Location = new Point(13, 229);
             btnOption1.Name = "btnOption1";
-            btnOption1.Size = new Size(261, 53);
+            btnOption1.Size = new Size(287, 49);
             btnOption1.TabIndex = 17;
             btnOption1.UseVisualStyleBackColor = true;
             btnOption1.Click += btnQuickAmount_Click;
@@ -256,9 +257,9 @@
             // btnOption2
             // 
             btnOption2.Font = new Font("Segoe UI", 12F);
-            btnOption2.Location = new Point(278, 249);
+            btnOption2.Location = new Point(306, 229);
             btnOption2.Name = "btnOption2";
-            btnOption2.Size = new Size(261, 53);
+            btnOption2.Size = new Size(287, 49);
             btnOption2.TabIndex = 18;
             btnOption2.UseVisualStyleBackColor = true;
             btnOption2.Click += btnQuickAmount_Click;
@@ -266,9 +267,9 @@
             // btnOption3
             // 
             btnOption3.Font = new Font("Segoe UI", 12F);
-            btnOption3.Location = new Point(12, 309);
+            btnOption3.Location = new Point(13, 284);
             btnOption3.Name = "btnOption3";
-            btnOption3.Size = new Size(261, 53);
+            btnOption3.Size = new Size(287, 49);
             btnOption3.TabIndex = 19;
             btnOption3.UseVisualStyleBackColor = true;
             btnOption3.Click += btnQuickAmount_Click;
@@ -276,9 +277,9 @@
             // btnOption4
             // 
             btnOption4.Font = new Font("Segoe UI", 12F);
-            btnOption4.Location = new Point(278, 309);
+            btnOption4.Location = new Point(306, 284);
             btnOption4.Name = "btnOption4";
-            btnOption4.Size = new Size(261, 53);
+            btnOption4.Size = new Size(287, 49);
             btnOption4.TabIndex = 20;
             btnOption4.UseVisualStyleBackColor = true;
             btnOption4.Click += btnQuickAmount_Click;
@@ -287,9 +288,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 18F);
-            label3.Location = new Point(12, 382);
+            label3.Location = new Point(13, 351);
             label3.Name = "label3";
-            label3.Size = new Size(239, 48);
+            label3.Size = new Size(247, 48);
             label3.TabIndex = 21;
             label3.Text = "預計扣款 NT$";
             label3.Click += label3_Click;
@@ -298,29 +299,29 @@
             // 
             label_deduct.BorderStyle = BorderStyle.FixedSingle;
             label_deduct.Font = new Font("Segoe UI", 18F);
-            label_deduct.Location = new Point(281, 386);
+            label_deduct.Location = new Point(309, 355);
             label_deduct.Name = "label_deduct";
-            label_deduct.Size = new Size(380, 48);
+            label_deduct.Size = new Size(418, 44);
             label_deduct.TabIndex = 22;
             label_deduct.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button_withdraw
             // 
             button_withdraw.Font = new Font("Segoe UI", 20F);
-            button_withdraw.Location = new Point(12, 454);
+            button_withdraw.Location = new Point(13, 418);
             button_withdraw.Name = "button_withdraw";
-            button_withdraw.Size = new Size(649, 80);
+            button_withdraw.Size = new Size(714, 74);
             button_withdraw.TabIndex = 24;
-            button_withdraw.Text = "提領";
+            button_withdraw.Text = "提款";
             button_withdraw.UseVisualStyleBackColor = true;
             button_withdraw.Click += button_withdraw_Click;
             // 
             // button_clear
             // 
             button_clear.Font = new Font("Segoe UI", 18F);
-            button_clear.Location = new Point(545, 249);
+            button_clear.Location = new Point(600, 229);
             button_clear.Name = "button_clear";
-            button_clear.Size = new Size(116, 113);
+            button_clear.Size = new Size(128, 104);
             button_clear.TabIndex = 25;
             button_clear.Text = "清除";
             button_clear.UseVisualStyleBackColor = true;
@@ -341,17 +342,17 @@
             groupBox2.Controls.Add(btnOption3);
             groupBox2.Controls.Add(btnOption1);
             groupBox2.Controls.Add(btnOption2);
-            groupBox2.Location = new Point(468, 96);
+            groupBox2.Location = new Point(515, 88);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(699, 545);
+            groupBox2.Size = new Size(769, 501);
             groupBox2.TabIndex = 26;
             groupBox2.TabStop = false;
             // 
             // ForeignExchangeForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(11F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1165, 643);
+            ClientSize = new Size(1282, 592);
             Controls.Add(label_current_rate);
             Controls.Add(label_currency_name);
             Controls.Add(button_back);

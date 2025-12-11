@@ -68,8 +68,16 @@ namespace dotATM.Forms
         {
             if (String.IsNullOrEmpty(accountTextBox.Text))
             {
+                accountTextBox.Text = "";
                 label_warning.Text = "無效帳號輸入";
                 return;
+            }
+            if (_service.VerifyAccountExistence(accountTextBox.Text)) 
+            {
+                MessageBox.Show("帳號已經存在");
+                accountTextBox.Text = "";
+                passwordTextBox.Text = "";
+                recheckTextBox.Text = "";
             }
             if (!IsPasswordValid(passwordTextBox.Text))
             {

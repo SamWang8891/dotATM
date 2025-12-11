@@ -38,6 +38,8 @@ namespace dotATM.Forms
             pictureBox_jp.Parent = button_jp;
             pictureBox_jp.Location = new Point(pictureBox_jp.Location.X - button_jp.Location.X, pictureBox_jp.Location.Y - button_jp.Location.Y);
 
+            textBox_target.ImeMode = ImeMode.Disable;
+            label_deduct.Text = "0";
             currentButton = button_jp;
             ActivateButton(button_jp);
             GetRate();
@@ -312,6 +314,11 @@ namespace dotATM.Forms
             MenuForm menuForm = new MenuForm(_service);
             menuForm.Show();
             this.Close();
+        }
+
+        private void textBox_target_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }
